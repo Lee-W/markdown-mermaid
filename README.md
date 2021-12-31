@@ -6,16 +6,16 @@ mermaid extension for Python-Markdown to add support for mermaid graph inside ma
 
 For `pip` installation (only python version >=3.x) :
 
-~~~shell
+```shell
 pip install markdown
-pip install md-mermaid
-~~~
+pip install git+https://github.com/Lee-W/md_mermaid#egg=md_mermaid
+```
 
 ## Usage
 
 In your python script :
 
-~~~python
+```python
 import markdown
 
 text = """
@@ -23,29 +23,29 @@ text = """
 
 Some text.
 
-​~~~mermaid
+​```mermaid
 graph TB
 A --> B
 B --> C
-​~~~
+​```
 
 Some other text.
 
-​~~~mermaid
+​```mermaid
 graph TB
 D --> E
 E --> F
-​~~~
+​```
 """
 
 html = markdown.markdown(text, extensions=['md_mermaid'])
 
 print(html)
-~~~
+```
 
 Output will result in :
 
-~~~html
+```html
 <h1>Title</h1>
 <p>Some text.</p>
 <div class="mermaid">
@@ -61,15 +61,20 @@ D --> E
 E --> F
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
-
-~~~
+```
 
 The `<script>...</script>` line appears only once even if there are several graphs in the file.
 
-> Note that the extension name have a '_' not a '-'.
+## How to use it with pelican
 
-> Attention : don't forget to include in your output html project the two following mermaid files :
->
-> * mermaid.css (optional, can be customised)
-> * mermaid.min.js (can be download here [here](https://unpkg.com/mermaid@8.1.0/dist/)) 
+Add the following `md_mermaid: {}` to `MARKDOWN["extension_configs"]` in your `pelicanconf.py`
+
+```python
+MARKDOWN = {
+    "extension_configs": {
+        "md_mermaid": {},
+    },
+}
+```
