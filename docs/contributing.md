@@ -61,7 +61,7 @@ inv test.cov
 
 ### Step 10. Reformat source code
 
-Format your code through `black` and `ruff`.
+Format your code through `ruff`.
 
 ```sh
 inv style.format

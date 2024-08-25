@@ -1,6 +1,5 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Github Actions](https://github.com/Lee-W/markdown-mermaid/actions/workflows/python-check.yaml/badge.svg)](https://github.com/Lee-W/markdown-mermaid/actions/workflows/python-check.yaml)
 [![PyPI Package latest release](https://img.shields.io/pypi/v/markdown-mermaid.svg?style=flat-square)](https://pypi.org/project/markdown-mermaid/)
 [![PyPI Package download count (per month)](https://img.shields.io/pypi/dm/markdown-mermaid?style=flat-square)](https://pypi.org/project/markdown-mermaid/)
