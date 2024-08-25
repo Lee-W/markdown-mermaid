@@ -1,6 +1,6 @@
 [project]
 name = "markdown-mermaidjs"
-version = "0.1.0"
+version = "1.0.0"
 authors = [{ name = "Wei Lee", email = "weilee.rx@gmail.com" }]
 description = "Python-Markdown extension to add Mermaid graph"
 license = "GPL-3.0-only"
@@ -28,7 +28,7 @@ build-backend = "hatchling.build"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.1.0"
+version = "1.0.0"
 tag_format = "$version"
 version_files = ["pyproject.toml:version"]
 
