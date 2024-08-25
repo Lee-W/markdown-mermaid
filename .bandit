@@ -1,0 +1,3 @@
+[bandit]
+targets: markdown-mermaidjs
+exclude: tests

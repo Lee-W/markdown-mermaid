@@ -1,0 +1,27 @@
+{
+    "template": "https://github.com/Lee-W/cookiecutter-python-template",
+    "commit": "80f8134f0733e972b0720b48afd7a9f292a948c4",
+    "checkout": null,
+    "context": {
+        "cookiecutter": {
+            "project_name": "markdown-mermaidjs",
+            "project_slug": "markdown-mermaidjs",
+            "project_description": "Python-Markdown extension to add Mermaid graph",
+            "github_username": "Lee-W",
+            "github_url": "https://github.com/Lee-W/markdown-mermaidjs",
+            "author_name": "Wei Lee",
+            "author_email": "weilee.rx@gmail.com",
+            "python_version": "3.8",
+            "dependency_management_tool": "poetry",
+            "default_branch": "main",
+            "use_strict_mypy_config": "y",
+            "build_pypi_package": "y",
+            "build_docker_image": "n",
+            "open_source_license": "GNU General Public License v3",
+            "auto_detect_update_from_cruft_template": "n",
+            "_template_version": "1.10.1",
+            "_template": "https://github.com/Lee-W/cookiecutter-python-template"
+        }
+    },
+    "directory": null
+}

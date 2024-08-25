@@ -1,0 +1,9 @@
+site_name: Python Project
+nav:
+  - Home: README.md
+  - Contributing: contributing.md
+theme:
+  name: 'material'
+repo_url: https://github.com/Lee-W/markdown-mermaidjs
+remote_branch: gh-pages
+remote_name: origin
