@@ -17,27 +17,15 @@ def mypy(ctx: Context) -> None:
 
 
 @task
-def black_check(ctx: Context) -> None:
-    """Check style through black"""
-    ctx.run(f"{VENV_PREFIX} black --check {COMMON_TARGETS_AS_STR}")
-
-
-@task
 def commit_check(ctx: Context, remote: str = "origin") -> None:
     """Check commit message through commitizen"""
     ctx.run(f"{VENV_PREFIX} cz -nr 3 check --rev-range {remote}/main..", warn=True)
 
 
-@task(pre=[ruff, mypy, black_check, commit_check], default=True)
+@task(pre=[ruff, mypy, commit_check], default=True)
 def run(ctx: Context) -> None:
-    """Check style through linter (Note that pylint is not included)"""
+    """Check style through linter"""
     pass
-
-
-@task
-def black(ctx: Context) -> None:
-    """Format Python code through Black"""
-    ctx.run(f"{VENV_PREFIX} black {COMMON_TARGETS_AS_STR}")
 
 
 @task
@@ -46,7 +34,7 @@ def ruff_format(ctx: Context) -> None:
     ctx.run(f"{VENV_PREFIX} ruff format {COMMON_TARGETS_AS_STR}")
 
 
-@task(pre=[black, ruff_format])
+@task(pre=[ruff_format])
 def format(ctx: Context) -> None:
-    """Reformat python files through black and ruff"""
+    """Reformat python files through and ruff"""
     pass
